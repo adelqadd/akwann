@@ -6,16 +6,16 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-public sealed partial class CoreContext : Entitas.Context<CoreEntity> {
+public sealed partial class SimContext : Entitas.Context<SimEntity> {
 
-    public CoreContext()
+    public SimContext()
         : base(
-            CoreComponentsLookup.TotalComponents,
+            SimComponentsLookup.TotalComponents,
             0,
             new Entitas.ContextInfo(
-                "Core",
-                CoreComponentsLookup.componentNames,
-                CoreComponentsLookup.componentTypes
+                "Sim",
+                SimComponentsLookup.componentNames,
+                SimComponentsLookup.componentTypes
             ),
             (entity) =>
 
@@ -24,7 +24,7 @@ public sealed partial class CoreContext : Entitas.Context<CoreEntity> {
 #else
                 new Entitas.SafeAERC(entity),
 #endif
-            () => new CoreEntity()
+            () => new SimEntity()
         ) {
     }
 }
