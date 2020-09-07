@@ -8,15 +8,33 @@
 //------------------------------------------------------------------------------
 public static class SimComponentsLookup {
 
+    public const int Acceleration = 0;
+    public const int Position = 1;
+    public const int SpritePath = 2;
+    public const int SpriteRenderer = 3;
+    public const int Velocity = 4;
+    public const int Viewable = 5;
+    public const int View = 6;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 7;
 
     public static readonly string[] componentNames = {
-
+        "Acceleration",
+        "Position",
+        "SpritePath",
+        "SpriteRenderer",
+        "Velocity",
+        "Viewable",
+        "View"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(AccelerationComponent),
+        typeof(PositionComponent),
+        typeof(SpritePathComponent),
+        typeof(SpriteRendererComponent),
+        typeof(VelocityComponent),
+        typeof(ViewableComponent),
+        typeof(ViewComponent)
     };
 }
