@@ -12,15 +12,15 @@ public sealed class InitializeTestSystem: IInitializeSystem {
         SimEntity e = _simContext.CreateEntity();
         e.isViewable = true;
         e.AddSpritePath(SpritePaths.CircleDirection);
+
         e.AddPosition(new Vector2(0, 0));
         e.AddVelocity(new Vector2(0, 0));
-        e.AddAcceleration(new Vector2(0.1f, 0.1f));
+        e.AddAcceleration(new Vector2(0, 0));
 
-        SimEntity ee = _simContext.CreateEntity();
-        ee.isViewable = true;
-        ee.AddSpritePath(SpritePaths.CircleDirection);
-        ee.AddPosition(new Vector2(0, 0));
-        ee.AddVelocity(new Vector2(0, 0));
-        ee.AddAcceleration(new Vector2(-0.1f, 0.1f));
+        e.AddMaxVelocity(1);
+        e.AddMaxAcceleration(1);
+
+        e.AddGravityForce(new Vector2(0, -1));
+        e.AddWindForce(new Vector2(2, 0));
     }
 }

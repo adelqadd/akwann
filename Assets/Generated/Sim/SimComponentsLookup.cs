@@ -9,32 +9,53 @@
 public static class SimComponentsLookup {
 
     public const int Acceleration = 0;
-    public const int Position = 1;
-    public const int SpritePath = 2;
-    public const int SpriteRenderer = 3;
-    public const int Velocity = 4;
-    public const int Viewable = 5;
-    public const int View = 6;
+    public const int AccumulatedForce = 1;
+    public const int Forces = 2;
+    public const int GravityForce = 3;
+    public const int MaxAcceleration = 4;
+    public const int MaxForce = 5;
+    public const int MaxVelocity = 6;
+    public const int Position = 7;
+    public const int SpritePath = 8;
+    public const int SpriteRenderer = 9;
+    public const int Velocity = 10;
+    public const int Viewable = 11;
+    public const int View = 12;
+    public const int WindForce = 13;
 
-    public const int TotalComponents = 7;
+    public const int TotalComponents = 14;
 
     public static readonly string[] componentNames = {
         "Acceleration",
+        "AccumulatedForce",
+        "Forces",
+        "GravityForce",
+        "MaxAcceleration",
+        "MaxForce",
+        "MaxVelocity",
         "Position",
         "SpritePath",
         "SpriteRenderer",
         "Velocity",
         "Viewable",
-        "View"
+        "View",
+        "WindForce"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(AccelerationComponent),
+        typeof(AccumulatedForceComponent),
+        typeof(ForcesComponent),
+        typeof(GravityForceComponent),
+        typeof(MaxAccelerationComponent),
+        typeof(MaxForceComponent),
+        typeof(MaxVelocityComponent),
         typeof(PositionComponent),
         typeof(SpritePathComponent),
         typeof(SpriteRendererComponent),
         typeof(VelocityComponent),
         typeof(ViewableComponent),
-        typeof(ViewComponent)
+        typeof(ViewComponent),
+        typeof(WindForceComponent)
     };
 }
