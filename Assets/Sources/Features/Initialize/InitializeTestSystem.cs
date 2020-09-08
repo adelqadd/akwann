@@ -1,5 +1,6 @@
 using Entitas;
 using UnityEngine;
+using System.Collections.Generic;
 
 public sealed class InitializeTestSystem: IInitializeSystem {
     private readonly Contexts _contexts;
@@ -12,6 +13,9 @@ public sealed class InitializeTestSystem: IInitializeSystem {
         SimEntity e = _simContext.CreateEntity();
         e.isViewable = true;
         e.AddSpritePath(SpritePaths.CircleDirection);
+        e.AddColor(new Color(1,0,0,1));
+
+        e.AddRotation(0);
 
         e.AddPosition(new Vector2(0, 0));
         e.AddVelocity(new Vector2(0, 0));
@@ -20,7 +24,11 @@ public sealed class InitializeTestSystem: IInitializeSystem {
         e.AddMaxVelocity(1);
         e.AddMaxAcceleration(1);
 
-        e.AddGravityForce(new Vector2(0, -1));
-        e.AddWindForce(new Vector2(2, 0));
+        e.AddForces(new List<Vector2>());
+
+        //e.AddGravityForce(new Vector2(0, -1));
+        //e.AddWindForce(new Vector2(2, 0));
+        //e.AddMass(10);
+        //e.AddDragCoefficent(0.5f);
     }
 }

@@ -10,30 +10,38 @@ public static class SimComponentsLookup {
 
     public const int Acceleration = 0;
     public const int AccumulatedForce = 1;
-    public const int Forces = 2;
-    public const int GravityForce = 3;
-    public const int MaxAcceleration = 4;
-    public const int MaxForce = 5;
-    public const int MaxVelocity = 6;
-    public const int Position = 7;
-    public const int SpritePath = 8;
-    public const int SpriteRenderer = 9;
-    public const int Velocity = 10;
-    public const int Viewable = 11;
-    public const int View = 12;
-    public const int WindForce = 13;
+    public const int Color = 2;
+    public const int DragCoefficent = 3;
+    public const int Forces = 4;
+    public const int GravityForce = 5;
+    public const int Mass = 6;
+    public const int MaxAcceleration = 7;
+    public const int MaxForce = 8;
+    public const int MaxVelocity = 9;
+    public const int Position = 10;
+    public const int Rotation = 11;
+    public const int SpritePath = 12;
+    public const int SpriteRenderer = 13;
+    public const int Velocity = 14;
+    public const int Viewable = 15;
+    public const int View = 16;
+    public const int WindForce = 17;
 
-    public const int TotalComponents = 14;
+    public const int TotalComponents = 18;
 
     public static readonly string[] componentNames = {
         "Acceleration",
         "AccumulatedForce",
+        "Color",
+        "DragCoefficent",
         "Forces",
         "GravityForce",
+        "Mass",
         "MaxAcceleration",
         "MaxForce",
         "MaxVelocity",
         "Position",
+        "Rotation",
         "SpritePath",
         "SpriteRenderer",
         "Velocity",
@@ -45,12 +53,16 @@ public static class SimComponentsLookup {
     public static readonly System.Type[] componentTypes = {
         typeof(AccelerationComponent),
         typeof(AccumulatedForceComponent),
+        typeof(ColorComponent),
+        typeof(DragCoefficentComponent),
         typeof(ForcesComponent),
         typeof(GravityForceComponent),
+        typeof(MassComponent),
         typeof(MaxAccelerationComponent),
         typeof(MaxForceComponent),
         typeof(MaxVelocityComponent),
         typeof(PositionComponent),
+        typeof(RotationComponent),
         typeof(SpritePathComponent),
         typeof(SpriteRendererComponent),
         typeof(VelocityComponent),

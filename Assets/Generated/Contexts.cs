@@ -21,11 +21,13 @@ public partial class Contexts : Entitas.IContexts {
 
     static Contexts _sharedInstance;
 
+    public InputContext input { get; set; }
     public SimContext sim { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { sim }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { input, sim }; } }
 
     public Contexts() {
+        input = new InputContext();
         sim = new SimContext();
 
         var postConstructors = System.Linq.Enumerable.Where(
@@ -61,6 +63,7 @@ public partial class Contexts {
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeContextObservers() {
         try {
+            CreateContextObserver(input);
             CreateContextObserver(sim);
         } catch(System.Exception) {
         }
